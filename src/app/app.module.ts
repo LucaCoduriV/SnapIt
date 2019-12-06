@@ -7,6 +7,7 @@ import { FourOhFourComponent } from './fourOhFour/fourOhFour.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { GallerieComponent } from './gallerie/gallerie.component';
 import { PostComponent } from './post/post.component';
+import {PostService} from './services/post.service';
 
 @NgModule({
    declarations: [
@@ -20,7 +21,9 @@ import { PostComponent } from './post/post.component';
       BrowserModule,
       AppRoutingModule
    ],
-   providers: [],
+   providers: [
+      PostService
+   ],
    bootstrap: [
       AppComponent
    ]
