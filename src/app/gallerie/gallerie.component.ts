@@ -8,12 +8,15 @@ import { PostService } from '../services/post.service';
 })
 export class GallerieComponent implements OnInit {
 
-  posts:any[];
+  posts:any;
 
   constructor(private postService : PostService) { }
 
   ngOnInit() {
-     this.posts = this.postService.getPosts();
+     this.posts = this.postService.getPosts((data)=>{
+       console.log(data);
+       this.posts = data;
+     });
   }
 
 }

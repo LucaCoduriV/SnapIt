@@ -6,25 +6,26 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostService {
 
-post = [
+post = 
 {
-  auth:{
+  "auth":{
     user:"luca",
     password:"pro"
   }
 }
 
-]
+
 
 constructor(private http:HttpClient) { }
 
-getPosts():any[]{
+getPosts(callback){
 
   this.http.post("http://localhost:8080/getusers",this.post).toPromise().then(data =>{
-    console.log(data);
+    setTimeout(()=>{
+      callback(data);
+    },1000)
+    
   });
-
-  return this.post;
 }
 
 }
