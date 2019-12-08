@@ -12,11 +12,12 @@ export class GallerieComponent implements OnInit {
 
   constructor(private postService : PostService) { }
 
-  ngOnInit() {
-     this.posts = this.postService.getPosts((data)=>{
-       console.log(data);
-       this.posts = data;
-     });
+
+  ngOnInit(){
+    this.postService.getPosts().subscribe((data) => { 
+        console.log(data);
+        this.posts = data;
+    });
   }
 
 }
