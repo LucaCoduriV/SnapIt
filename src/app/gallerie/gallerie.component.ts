@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../services/post.service';
+import { async } from 'q';
 
 @Component({
   selector: 'app-gallerie',
@@ -14,10 +15,12 @@ export class GallerieComponent implements OnInit {
 
 
   ngOnInit(){
-    this.postService.getPosts().subscribe((data) => { 
-        console.log(data);
-        this.posts = data;
-    });
+     this.getData();
+     
+  }
+
+  async getData(){
+    this.posts = await this.postService.getPosts();
   }
 
 }

@@ -1,3 +1,17 @@
-<div>
-    <div class="uk-card uk-card-default uk-card-body">{{username}}</div>
+<div class="uk-card uk-card-default">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="40" height="40" src="assets/images/avatar.jpg">
+            </div>
+            <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">{{username}}</h3>
+                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">{{createTime}}</time></p>
+            </div>
+        </div>
+    </div>
+    <img class="uk-margin-remove" data-src="assets/images/test.jpg" width="500" height="500" alt="" uk-img>
+    <div class="uk-card-footer">
+        <p>{{description}}</p>
+    </div>
 </div>

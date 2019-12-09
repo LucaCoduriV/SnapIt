@@ -11,10 +11,12 @@ export class PostComponent implements OnInit {
   @Input() username: string;
   @Input() description: string;
   @Input() pictureUrl: string;
+  @Input() createTime: string;
 
   constructor() { }
 
   ngOnInit() {
+    console.log("coucou", this.id, this.username);
   }
 
 }

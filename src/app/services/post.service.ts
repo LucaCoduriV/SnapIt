@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { promise } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
@@ -19,9 +20,13 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
+  
 
-  getPosts():Observable<any> {
-    return this.http.post("http://localhost:8080/getpostsWithUsers", this.post);
+  async getPosts() {
+    setTimeout(()=>{
+      return this.http.post<object>("http://localhost:8080/getpostsWithUsers", this.post).toPromise();
+    },1000)
+
   }
 
 }

@@ -9,6 +9,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { GallerieComponent } from './gallerie/gallerie.component';
 import { PostComponent } from './post/post.component';
 import {PostService} from './services/post.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
    declarations: [
@@ -16,7 +17,8 @@ import {PostService} from './services/post.service';
       FourOhFourComponent,
       AccueilComponent,
       GallerieComponent,
-      PostComponent
+      PostComponent,
+      LoginComponent
    ],
    imports: [
       BrowserModule,
