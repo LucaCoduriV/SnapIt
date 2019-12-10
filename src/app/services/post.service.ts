@@ -22,11 +22,8 @@ export class PostService {
 
   
 
-  async getPosts() {
-    setTimeout(()=>{
-      return this.http.post<object>("http://localhost:8080/getpostsWithUsers", this.post).toPromise();
-    },1000)
-
+  getPosts() {
+    return this.http.post("http://localhost:8080/getpostsWithUsers", this.post);
   }
 
 }

@@ -15,12 +15,11 @@ export class GallerieComponent implements OnInit {
 
 
   ngOnInit(){
-     this.getData();
+    this.postService.getPosts().subscribe((data) => { 
+      console.log(data);
+      this.posts = data;
+  });
      
-  }
-
-  async getData(){
-    this.posts = await this.postService.getPosts();
   }
 
 }
