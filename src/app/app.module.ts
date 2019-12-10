@@ -10,6 +10,8 @@ import { GallerieComponent } from './gallerie/gallerie.component';
 import { PostComponent } from './post/post.component';
 import {PostService} from './services/post.service';
 import { LoginComponent } from './login/login.component';
+import { ImageUploadComponent } from './image-upload/image-upload.component';
+import { ImageService } from './services/Image.service';
 
 @NgModule({
    declarations: [
@@ -18,7 +20,8 @@ import { LoginComponent } from './login/login.component';
       AccueilComponent,
       GallerieComponent,
       PostComponent,
-      LoginComponent
+      LoginComponent,
+      ImageUploadComponent
    ],
    imports: [
       BrowserModule,
@@ -26,7 +29,8 @@ import { LoginComponent } from './login/login.component';
       HttpClientModule
    ],
    providers: [
-      PostService
+      PostService,
+      ImageService
    ],
    bootstrap: [
       AppComponent
