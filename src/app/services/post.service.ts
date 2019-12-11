@@ -22,8 +22,13 @@ export class PostService {
 
   
 
-  getPosts() {
+  getPosts():Observable<any> {
     return this.http.post("http://localhost:8080/getpostsWithUsers", this.post);
+  }
+
+  getUser(user:string):Observable<any>{
+    this.post["user"] = {"username":user};
+    return this.http.post("http://localhost:8080/getUser", this.post);
   }
 
 }

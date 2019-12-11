@@ -8,10 +8,13 @@ import { FourOhFourComponent } from './fourOhFour/fourOhFour.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { GallerieComponent } from './gallerie/gallerie.component';
 import { PostComponent } from './post/post.component';
-import {PostService} from './services/post.service';
+import { PostService } from './services/post.service';
 import { LoginComponent } from './login/login.component';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { ImageService } from './services/Image.service';
+import { AuthService } from './services/Auth.service';
+import { AuthGuard } from './guards/auth.guard';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
    declarations: [
@@ -26,11 +29,15 @@ import { ImageService } from './services/Image.service';
    imports: [
       BrowserModule,
       AppRoutingModule,
-      HttpClientModule
+      HttpClientModule,
+      FormsModule,
+      ReactiveFormsModule
    ],
    providers: [
       PostService,
-      ImageService
+      ImageService,
+      AuthService,
+      AuthGuard
    ],
    bootstrap: [
       AppComponent

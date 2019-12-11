@@ -5,11 +5,12 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { GallerieComponent } from './gallerie/gallerie.component';
 import { LoginComponent } from './login/login.component';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent},
-  { path: 'galerie', component: GallerieComponent},
+  { path: 'galerie', component: GallerieComponent, canActivate: [AuthGuard]},
   { path: 'not-found', component: FourOhFourComponent},
   { path: 'login', component: LoginComponent},
   { path: 'uploadImage', component: ImageUploadComponent},
