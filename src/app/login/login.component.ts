@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
         }
         else {
           console.log("Login failed");
-          this.message = "Please check your userid and password";
+          this.message = "Veuillez vérifier votre nom d'utilisateur ou mot de passe.";
         }
       });
 

@@ -1,3 +1,7 @@
+<div *ngIf="message" class="uk-alert-danger" uk-alert>
+  <a class="uk-alert-close" uk-close></a>
+  <p>{{message}}</p>
+</div>
 <form [formGroup]="loginForm" (ngSubmit)="login()">
   <fieldset class="uk-fieldset">
     <legend class="uk-legend">Login</legend>
