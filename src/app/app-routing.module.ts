@@ -6,6 +6,7 @@ import { GallerieComponent } from './gallerie/gallerie.component';
 import { LoginComponent } from './login/login.component';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { AuthGuard } from './guards/auth.guard';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'not-found', component: FourOhFourComponent},
   { path: 'login', component: LoginComponent},
   { path: 'uploadImage', component: ImageUploadComponent},
+  { path: 'register', component: RegisterComponent },
   { path: '', component: AccueilComponent},
   { path: '**', redirectTo: 'not-found'}
 ];

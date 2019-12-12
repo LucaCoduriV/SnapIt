@@ -15,6 +15,7 @@ import { ImageService } from './services/Image.service';
 import { AuthService } from './services/Auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
    declarations: [
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       GallerieComponent,
       PostComponent,
       LoginComponent,
-      ImageUploadComponent
+      ImageUploadComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,
