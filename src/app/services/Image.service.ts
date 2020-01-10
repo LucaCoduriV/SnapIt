@@ -14,7 +14,7 @@ export class ImageService {
         const formData = new FormData();
 
         formData.append('image', image);
-
+        console.log(formData.getAll('image'));
         return this.http.post('http://localhost:8080/imageUpload', formData);
     }
 }
